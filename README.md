@@ -9,6 +9,9 @@ Quickly get posts from Reddit in your terminal window. The default is World News
 ```shell
 ops install @cawood/reddit
 ```
+```shell
+ops run reddit
+```
 
 ### Configuration
 
@@ -20,3 +23,7 @@ Inside config.js...
 
 1. Add your Reddit account information. Reddit accounts are free and easy to set up: https://www.reddit.com/signup
 2. Add your Reddit API key. Getting a client ID (and secret) is not difficult, you just need to go through the process: https://github.com/reddit-archive/reddit/wiki/OAuth2-Quick-Start-Example#first-steps
+
+If you do not configure the Op, you will see this error:
+
+ ```UnhandledPromiseRejectionWarning: StatusCodeError: 401 - {"message":"Unauthorized","error":401}```
