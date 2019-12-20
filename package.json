@@ -1,0 +1,16 @@
+{
+  "name": "rnews",
+  "version": "0.1.1",
+  "description": "News from Reddit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Stephen Cawood",
+  "license": "ISC",
+  "dependencies": {
+    "@cto.ai/sdk": "^2.0.1",
+    "snoowrap": "^1.20.1"
+  }
+}
