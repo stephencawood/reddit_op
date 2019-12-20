@@ -29,3 +29,7 @@ Inside config.js...
 If you do not configure the Op, you will see this error:
 
  ```UnhandledPromiseRejectionWarning: StatusCodeError: 401 - {"message":"Unauthorized","error":401}```
+
+### Sample Output
+
+🌍 'Deeply cruel' Boris Johnson faces backlash after axing protections for child refugees, as Rees-Mogg reappears for first time since blaming Grenfell victims https://www.independent.co.uk/news/uk/politics/boris-johnson-news-live-brexit-deal-vote-bill-result-commons-a9254566.html
