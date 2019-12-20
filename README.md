@@ -6,6 +6,8 @@ Quickly get posts from Reddit in your terminal window. The default is World News
 
 <a name="installation"></a>
 
+First install the Ops CLI from [CTO.ai].
+
 ```shell
 ops install @cawood/reddit
 ```
