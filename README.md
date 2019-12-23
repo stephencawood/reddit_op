@@ -12,10 +12,7 @@ First install the Ops Platform CLI from CTO.ai: https://cto.ai
 npm i @cto.ai/ops
 ```
 ```shell
-ops install @cawood/reddit
-```
-```shell
-ops run reddit
+ops run @cawood/reddit
 ```
 
 ### Configuration
