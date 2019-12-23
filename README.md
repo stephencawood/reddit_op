@@ -11,8 +11,11 @@ First install the Ops Platform CLI from CTO.ai: https://cto.ai
 ```shell
 npm i @cto.ai/ops
 ```
+
+Then, download the source and configure the Op (see below). Once you have the config done, you can run the Op locally.
+
 ```shell
-ops run @cawood/reddit
+ops run reddit
 ```
 
 ### Configuration
