@@ -1,24 +1,44 @@
-const snoowrap = require('snoowrap'); // reddit API wrapper
-const { ux, sdk } = require('@cto.ai/sdk')
-var config = require('./config');
-var r = new snoowrap(config.snooConfig);
-// sdk.log(ux.colors.primary('\n\nLogging into Reddit...'))
-
+const https = require('https');
 const main = async () => {
   async function getPosts(){
-    await r.getHot('worldnews', {limit: 5}).then((val)=>{
-      if(val.length == 0) {
-        sdk.log("No Reddit posts found...");
-      } else {
-        for(let i = 0;i<val.length;i++){
-          let title = val[i].title;
-          let url = val[i].url;
-          sdk.log(ux.colors.magentaBright(`🌍 ${title}`), `${url}\n`);
-        }
-      } 
-    });
-  }
-  getPosts();
-}
+    var count = 5;
+    var sub = 'worldnews';
+    var path = '/r/' + sub + '/hot.json?count=' + count;
+    const options = {
+      hostname: 'www.reddit.com',
+      port: 443,
+      path: path,
+      method: 'GET'
+    }
 
+    const req = https.request(options, res => {
+      var body = '';
+      res.on('data', function (chunk) {
+        body = body + chunk;
+      });
+      res.on('end',function(){
+        if (res.statusCode != 200) {
+          console.log("Reddit call failed with response code " + res.statusCode);
+        } else {
+          try {
+            for(i = 0; i < count; i++) {
+              console.log('🌍 ' + JSON.stringify(JSON.parse(body).data.children[i].data.title));
+              console.log(JSON.stringify(JSON.parse(body).data.children[i].data.url) + '\n');
+            }
+          } catch (err) {
+            console.log('Error: ' + err);
+          }
+        }
+      });
+    })
+
+    req.on('error', error => {
+      console.error(error)
+    })
+    req.end()
+
+  };
+  getPosts();
+
+}
 main()
