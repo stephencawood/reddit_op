@@ -1,6 +1,6 @@
 # Reddit Posts Op for CTO.ai Ops CLI
 
-Quickly get posts from Reddit in your terminal window or Slack app. The default is World News, but you can change it to any subreddit. The Reddit posts Op runs on the CTO.ai Ops CLI.
+Quickly get posts from Reddit in your terminal window or Slack app. The default is World News, but I'll update it soon, so you can change it to any subreddit. The Reddit posts Op runs on the CTO.ai Ops CLI.
 
 ### Installation
 
