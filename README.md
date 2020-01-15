@@ -16,5 +16,5 @@ ops run @cawood/reddit
 
 ### Sample Output
 
-🌍 Firefighters in Australia Say Situation 'Out of Control' as Prime Minister Denies Request for Emergency Aid
-https://www.commondreams.org/news/2019/12/24/firefighters-australia-say-situation-out-control-prime-minister-denies-request
+🌍 "Climate change deniers robbing Australia of time to respond to impacts, Australian Science Minister warns"
+"https://www.abc.net.au/news/2020-01-15/cabinet-ministers-karen-andrews-climate-change-time-wasters/11868694"
