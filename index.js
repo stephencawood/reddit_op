@@ -1,6 +1,6 @@
+const { ux } = require('@cto.ai/sdk')
 const https = require('https');
 const main = async () => {
-  async function getPosts(){
     var count = 5;
     var sub = 'worldnews';
     var path = '/r/' + sub + '/hot.json?count=' + count;
@@ -16,29 +16,25 @@ const main = async () => {
       res.on('data', function (chunk) {
         body = body + chunk;
       });
-      res.on('end',function(){
+      res.on('end',async function(){
         if (res.statusCode != 200) {
-          console.log("Reddit call failed with response code " + res.statusCode);
+          await ux.print("Reddit call failed with response code " + res.statusCode);
         } else {
           try {
             for(i = 0; i < count; i++) {
-              console.log('🌍 ' + JSON.stringify(JSON.parse(body).data.children[i].data.title));
-              console.log(JSON.stringify(JSON.parse(body).data.children[i].data.url) + '\n');
+              await ux.print('🌍 ' + JSON.stringify(JSON.parse(body).data.children[i].data.title));
+              await ux.print(JSON.stringify(JSON.parse(body).data.children[i].data.url) + '\n');
             }
           } catch (err) {
-            console.log('Error: ' + err);
+            await ux.print('Error: ' + err);
           }
         }
       });
     })
 
-    req.on('error', error => {
-      console.error(error)
+    req.on('error', async (error) => {
+      await ux.print(error)
     })
     req.end()
-
-  };
-  getPosts();
-
 }
 main()
