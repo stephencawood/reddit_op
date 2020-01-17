@@ -1,7 +1,7 @@
 # for more info visit https://cto.ai/docs/ops-reference
 version: "1"
 commands:
-  - name: reddit:1.2.0
+  - name: reddit:1.3.0
     public: true
     remote: true
     description: Posts from Reddit in your terminal or Slack window
