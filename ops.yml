@@ -1,7 +1,7 @@
 # for more info visit https://cto.ai/docs/ops-reference
 version: "1"
 commands:
-  - name: reddit:1.3.0
+  - name: reddit:1.4.0
     public: true
     remote: true
     description: Posts from Reddit in your terminal or Slack window
@@ -15,4 +15,4 @@ commands:
     port:
       - 3000:3000
     help:
-      usage: "ops run @cawood/reddit"
+      usage: "ops run @cawood/reddit <subname>"
